@@ -1,7 +1,6 @@
+// ignore_for_file: avoid_unnecessary_containers
+
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter_svg/svg.dart';
 import 'dart:math' as math;
 
 class MyCard extends StatelessWidget {
@@ -40,7 +39,7 @@ class MyCard extends StatelessWidget {
                                       topLeft: Radius.circular(10)),
                                   child: Image.asset(
                                     fit: BoxFit.fill,
-                                    'assets/blood_donation.jpeg',
+                                    'assets/images/blood_donation.jpeg',
                                   ),
                                 ),
                               )),
@@ -117,9 +116,8 @@ class MyCard extends StatelessWidget {
                                                         backgroundColor:
                                                             Colors.transparent,
                                                         radius: 30,
-                                                        backgroundImage:
-                                                            const AssetImage(
-                                                                "assets/blood_drop.png"),
+                                                        backgroundImage: AssetImage(
+                                                            "assets/images/blood_drop.png"),
                                                       ),
                                                     ),
                                                   ),
@@ -305,7 +303,7 @@ class MyCard extends StatelessWidget {
                                                                             50.0),
                                                                 child:
                                                                     Image.asset(
-                                                                  'assets/1.jpg',
+                                                                  'assets/images/1.jpg',
                                                                 ),
                                                               ),
                                                             ),
@@ -439,8 +437,7 @@ class MyCard extends StatelessWidget {
                             boxShadow: [
                               BoxShadow(
                                   blurRadius: 3,
-                                  color:
-                                      const Color.fromARGB(255, 205, 205, 205),
+                                  color: Color.fromARGB(255, 205, 205, 205),
                                   spreadRadius: 1)
                             ],
                           ),

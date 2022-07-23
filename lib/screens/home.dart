@@ -10,6 +10,11 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
@@ -62,12 +67,12 @@ class _HomeState extends State<Home> {
                                   ),
                                 ),
                                 child: ClipRRect(
-                                  child: Image.asset('assets/1.jpg'),
                                   borderRadius: const BorderRadius.only(
-                                    topRight: const Radius.circular(15),
+                                    topRight: Radius.circular(15),
                                     topLeft: Radius.circular(15),
-                                    bottomRight: const Radius.circular(15),
+                                    bottomRight: Radius.circular(15),
                                   ),
+                                  child: Image.asset('assets/images/1.jpg'),
                                 ),
                               ),
                               Positioned(

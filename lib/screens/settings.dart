@@ -1,8 +1,8 @@
+// ignore_for_file: avoid_unnecessary_containers
+
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class Settings extends StatefulWidget {
   const Settings({Key? key}) : super(key: key);
@@ -82,10 +82,10 @@ class _SettingsState extends State<Settings> {
                           // color: Colors.white,
                           border: Border.all(color: Colors.white, width: 2),
                           shape: BoxShape.circle,
-                          boxShadow: [
-                            const BoxShadow(
+                          boxShadow: const [
+                            BoxShadow(
                                 blurRadius: 5,
-                                color: const Color.fromARGB(255, 205, 205, 205),
+                                color: Color.fromARGB(255, 205, 205, 205),
                                 spreadRadius: 4)
                           ],
                         ),
@@ -155,7 +155,7 @@ class _SettingsState extends State<Settings> {
                                           //color: Colors.tealAccent,
                                           padding: const EdgeInsets.all(10),
                                           child: const Center(
-                                            child: const Icon(
+                                            child: Icon(
                                               Icons.male_rounded,
                                               size: 40,
                                               color: Colors.grey,
@@ -174,9 +174,9 @@ class _SettingsState extends State<Settings> {
                                                 MainAxisAlignment.center,
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
-                                            children: [
-                                              const Text("Gender"),
-                                              const Text("Male")
+                                            children: const [
+                                              Text("Gender"),
+                                              Text("Male")
                                             ],
                                           ),
                                         ),
@@ -270,9 +270,9 @@ class _SettingsState extends State<Settings> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
-                                    children: [
-                                      const Text("Date of Birth"),
-                                      const Text("05-June-1997")
+                                    children: const [
+                                      Text("Date of Birth"),
+                                      Text("05-June-1997")
                                     ],
                                   ),
                                 ),
@@ -318,9 +318,9 @@ class _SettingsState extends State<Settings> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
-                                    children: [
-                                      const Text("Date of Birth"),
-                                      const Text("05-June-1997")
+                                    children: const [
+                                      Text("Date of Birth"),
+                                      Text("05-June-1997")
                                     ],
                                   ),
                                 ),
@@ -349,7 +349,7 @@ class _SettingsState extends State<Settings> {
                                   //color: Colors.tealAccent,
                                   padding: const EdgeInsets.all(10),
                                   child: const Center(
-                                    child: const Icon(
+                                    child: Icon(
                                       Icons.call_rounded,
                                       size: 30,
                                       color: Colors.grey,
@@ -366,9 +366,9 @@ class _SettingsState extends State<Settings> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
-                                    children: [
-                                      const Text("Date of Birth"),
-                                      const Text("05-June-1997")
+                                    children: const [
+                                      Text("Date of Birth"),
+                                      Text("05-June-1997")
                                     ],
                                   ),
                                 ),
@@ -395,7 +395,7 @@ class _SettingsState extends State<Settings> {
                                       width: MediaQuery.of(context).size.width *
                                           .25,
                                       child: const Center(
-                                        child: const Text(
+                                        child: Text(
                                           'CHANGE',
                                           style: TextStyle(
                                               fontSize: 15, color: Colors.red),
@@ -429,7 +429,7 @@ class _SettingsState extends State<Settings> {
                                   //color: Colors.tealAccent,
                                   padding: const EdgeInsets.all(10),
                                   child: const Center(
-                                      child: const Icon(Icons.rule_rounded)),
+                                      child: Icon(Icons.rule_rounded)),
                                 ),
                               ),
                               Expanded(
@@ -441,8 +441,8 @@ class _SettingsState extends State<Settings> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
-                                    children: [
-                                      const Text("Height"),
+                                    children: const [
+                                      Text("Height"),
                                     ],
                                   ),
                                 ),
@@ -500,8 +500,8 @@ class _SettingsState extends State<Settings> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
-                                    children: [
-                                      const Text("Weight"),
+                                    children: const [
+                                      Text("Weight"),
                                     ],
                                   ),
                                 ),
@@ -512,9 +512,9 @@ class _SettingsState extends State<Settings> {
                                   //color: Colors.tealAccent,
                                   padding: const EdgeInsets.all(5),
                                   child: const Center(
-                                    child: const Text(
+                                    child: Text(
                                       "66kg",
-                                      style: const TextStyle(
+                                      style: TextStyle(
                                           fontWeight: FontWeight.bold),
                                     ),
                                   ),

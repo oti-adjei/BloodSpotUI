@@ -74,6 +74,18 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "google_nav_bar",
+      "rootUri": "file:///Users/george/.pub-cache/hosted/pub.dartlang.org/google_nav_bar-5.0.6",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "line_icons",
+      "rootUri": "file:///Users/george/.pub-cache/hosted/pub.dartlang.org/line_icons-2.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "lints",
       "rootUri": "file:///Users/george/.pub-cache/hosted/pub.dartlang.org/lints-2.0.0",
       "packageUri": "lib/",
@@ -182,7 +194,7 @@
       "languageVersion": "2.17"
     }
   ],
-  "generated": "2022-07-23T21:59:34.504596Z",
+  "generated": "2022-07-23T22:59:17.419801Z",
   "generator": "pub",
   "generatorVersion": "2.17.5"
 }
