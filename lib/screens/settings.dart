@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -10,6 +12,31 @@ class Settings extends StatefulWidget {
 }
 
 class _SettingsState extends State<Settings> {
+  void EditDialog() {
+    showDialog(
+        context: context,
+        builder: (context) {
+          return BackdropFilter(
+            filter: ImageFilter.blur(
+              sigmaX: 5.0,
+              sigmaY: 5.0,
+            ),
+            child: AlertDialog(
+                title: const Text("Sorry"),
+                content: const Text(
+                    "No course material found for this programme and year."),
+                actions: [
+                  TextButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    child: const Text("OK"),
+                  ),
+                ]),
+          );
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,14 +54,15 @@ class _SettingsState extends State<Settings> {
                 color: Colors.black,
               ),
               onPressed: () {
-                // do something
+                // Display the edit dialog
+                EditDialog();
               },
             )
           ],
           backgroundColor: Colors.white,
-          title: Text(
+          title: const Text(
             "Settings",
-            style: const TextStyle(color: Colors.black),
+            style: TextStyle(color: Colors.black),
           ),
         ),
         //Body
@@ -63,12 +91,12 @@ class _SettingsState extends State<Settings> {
                         ),
                         margin: const EdgeInsets.only(top: 20),
                         //color: Colors.indigo,
-                        child: Center(
-                            child: const SizedBox(
+                        child: const Center(
+                            child: SizedBox(
                           height: 115,
                           width: 115,
                           child: CircleAvatar(
-                            backgroundImage: AssetImage("assets/1.jpg"),
+                            backgroundImage: AssetImage("assets/images/1.jpg"),
                           ),
                         )),
                       ),
@@ -354,7 +382,8 @@ class _SettingsState extends State<Settings> {
                                     onTap: () {},
                                     child: Container(
                                       decoration: BoxDecoration(
-                                        color: Color.fromARGB(20, 231, 39, 39),
+                                        color: const Color.fromARGB(
+                                            20, 231, 39, 39),
                                         borderRadius: const BorderRadius.all(
                                             Radius.circular(5)),
                                         border: Border.all(color: Colors.red),
