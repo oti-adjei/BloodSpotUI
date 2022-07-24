@@ -3,8 +3,26 @@
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
+import 'package:url_launcher/url_launcher.dart';
+
 class MyCard extends StatelessWidget {
-  const MyCard({Key? key}) : super(key: key);
+  final int age;
+  final String name;
+  final day;
+  final double distance;
+  final String url;
+  final String gender;
+  final String mainText;
+  const MyCard(
+      {Key? key,
+      required this.age,
+      required this.name,
+      required this.day,
+      required this.distance,
+      required this.url,
+      required this.gender,
+      required this.mainText})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -64,10 +82,11 @@ class MyCard extends StatelessWidget {
                                           crossAxisAlignment:
                                               CrossAxisAlignment.start,
                                           children: [
-                                            const Padding(
-                                              padding: EdgeInsets.only(top: 20),
-                                              child: Text("Today",
-                                                  style: TextStyle(
+                                            Padding(
+                                              padding: const EdgeInsets.only(
+                                                  top: 20),
+                                              child: Text("$day",
+                                                  style: const TextStyle(
                                                       fontSize: 15,
                                                       color: Colors.grey)),
                                             ),
@@ -86,21 +105,21 @@ class MyCard extends StatelessWidget {
                                                     crossAxisAlignment:
                                                         CrossAxisAlignment
                                                             .start,
-                                                    children: const [
-                                                      Text(
-                                                          "Donate Blood and \nBecome a Superhero",
-                                                          style: TextStyle(
-                                                              fontSize: 20,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold,
-                                                              color: Color
-                                                                  .fromARGB(
-                                                                      200,
-                                                                      79,
-                                                                      78,
-                                                                      78))),
-                                                      Padding(
+                                                    children: [
+                                                      Text(mainText,
+                                                          style:
+                                                              const TextStyle(
+                                                                  fontSize: 20,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold,
+                                                                  color: Color
+                                                                      .fromARGB(
+                                                                          200,
+                                                                          79,
+                                                                          78,
+                                                                          78))),
+                                                      const Padding(
                                                           padding:
                                                               EdgeInsets.only(
                                                                   top: 5)),
@@ -146,10 +165,10 @@ class MyCard extends StatelessWidget {
                                                     color: Color.fromARGB(
                                                         199, 226, 225, 225),
                                                   ),
-                                                  child: const Center(
+                                                  child: Center(
                                                     child: Text(
-                                                      "Donate",
-                                                      style: TextStyle(
+                                                      gender,
+                                                      style: const TextStyle(
                                                           fontSize: 15,
                                                           color: Color.fromARGB(
                                                               255,
@@ -179,10 +198,10 @@ class MyCard extends StatelessWidget {
                                                     color: Color.fromARGB(
                                                         199, 226, 225, 225),
                                                   ),
-                                                  child: const Center(
+                                                  child: Center(
                                                     child: Text(
-                                                      "Age: 10",
-                                                      style: TextStyle(
+                                                      "Age: $age",
+                                                      style: const TextStyle(
                                                           fontSize: 15,
                                                           color: Color.fromARGB(
                                                               255,
@@ -212,10 +231,10 @@ class MyCard extends StatelessWidget {
                                                     color: Color.fromARGB(
                                                         199, 226, 225, 225),
                                                   ),
-                                                  child: const Center(
+                                                  child: Center(
                                                     child: Text(
-                                                      "11km",
-                                                      style: TextStyle(
+                                                      "$distance km",
+                                                      style: const TextStyle(
                                                           fontSize: 15,
                                                           color: Color.fromARGB(
                                                               255,
@@ -237,21 +256,27 @@ class MyCard extends StatelessWidget {
                                                   0.04,
                                               //color: Colors.green,
                                               child: Row(
-                                                children: const [
-                                                  Icon(Icons.location_on,
+                                                children: [
+                                                  const Icon(Icons.location_on,
                                                       color: Colors.grey),
                                                   Padding(
-                                                    padding: EdgeInsets.only(
-                                                        left: 10.0),
-                                                    child: Text(
-                                                        "Click here for Location",
-                                                        style: TextStyle(
-                                                            decoration:
-                                                                TextDecoration
-                                                                    .underline,
-                                                            fontSize: 16,
-                                                            color: Colors
-                                                                .blueAccent)),
+                                                    padding:
+                                                        const EdgeInsets.only(
+                                                            left: 10.0),
+                                                    child: InkWell(
+                                                      onTap: () {
+                                                        linkto(url);
+                                                      },
+                                                      child: const Text(
+                                                          "Click here for Location",
+                                                          style: TextStyle(
+                                                              decoration:
+                                                                  TextDecoration
+                                                                      .underline,
+                                                              fontSize: 16,
+                                                              color: Colors
+                                                                  .blueAccent)),
+                                                    ),
                                                   ),
                                                 ],
                                               ),
@@ -321,8 +346,9 @@ class MyCard extends StatelessWidget {
                                                               crossAxisAlignment:
                                                                   CrossAxisAlignment
                                                                       .start,
-                                                              children: const [
-                                                                Text("Jared",
+                                                              children: [
+                                                                const Text(
+                                                                    "Posted by",
                                                                     style: TextStyle(
                                                                         fontSize:
                                                                             15,
@@ -331,9 +357,8 @@ class MyCard extends StatelessWidget {
                                                                             114,
                                                                             114,
                                                                             114))),
-                                                                Text(
-                                                                    "Jared Farad",
-                                                                    style: TextStyle(
+                                                                Text(name,
+                                                                    style: const TextStyle(
                                                                         fontSize:
                                                                             20,
                                                                         fontWeight:
@@ -461,6 +486,15 @@ class MyCard extends StatelessWidget {
             ])),
       ),
     );
+  }
+}
+
+Future linkto(String url) async {
+  const url = 'https://blog.logrocket.com';
+  if (await canLaunchUrl(Uri.parse(url))) {
+    await launch(url, forceWebView: true); //forceWebView is true now
+  } else {
+    throw 'Could not launch $url';
   }
 }
 
