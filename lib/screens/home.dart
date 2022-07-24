@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widget/appbar.dart';
 import '../widget/card.dart';
 
 class Home extends StatefulWidget {
@@ -21,95 +22,15 @@ class _HomeState extends State<Home> {
           gradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomCenter,
-              colors: [Color.fromARGB(255, 224, 78, 76), Colors.white])),
+              colors: [Color.fromARGB(255, 78, 54, 255), Colors.white])),
       child: Scaffold(
           backgroundColor: Colors.transparent,
           body: SafeArea(
               child: Column(
             children: [
-              Padding(
-                  padding: const EdgeInsets.all(15),
-                  child: Column(children: [
-                    Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          // Hi Jared!
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
-                              Text("Welcome",
-                                  style: TextStyle(
-                                      fontSize: 25, color: Colors.white)),
-                              Padding(padding: EdgeInsets.only(top: 5)),
-                              Text(
-                                'Hello Jared Prishska Albert!',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 15,
-                                ),
-                              ),
-                            ],
-                          ),
-                          //profile logo
-                          Stack(
-                            children: [
-                              Container(
-                                height: 60,
-                                // padding: EdgeInsets.all(2),
-                                decoration: BoxDecoration(
-                                  borderRadius: const BorderRadius.all(
-                                    Radius.circular(15),
-                                  ),
-                                  border: Border.all(
-                                    width: 1,
-                                    color: Colors.white,
-                                    style: BorderStyle.solid,
-                                  ),
-                                ),
-                                child: ClipRRect(
-                                  borderRadius: const BorderRadius.only(
-                                    topRight: Radius.circular(15),
-                                    topLeft: Radius.circular(15),
-                                    bottomRight: Radius.circular(15),
-                                  ),
-                                  child: Image.asset('assets/images/1.jpg'),
-                                ),
-                              ),
-                              Positioned(
-                                left: 0,
-                                bottom: 0,
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    border: Border.all(
-                                      width: 1,
-                                      color: Colors.white,
-                                      style: BorderStyle.solid,
-                                    ),
-                                  ),
-                                  child: Container(
-                                    decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      color: Colors.green,
-                                      // borderRadius: BorderRadius.all(
-                                      //   Radius.circular(10),
-                                      // ),
-                                      border: Border.all(
-                                        width: 3,
-                                        color: Colors.green,
-                                        style: BorderStyle.solid,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                        ]), // Row),,
-                    const Padding(
-                      padding: EdgeInsets.only(top: 5),
-                    ),
-                  ])),
+              const Customappbar(
+                  userName: "Jared Prishska Albert",
+                  userImage: "https://i.imgur.com/kQbx35z.jpg"),
               Container(
                 width: MediaQuery.of(context).size.width / 2,
                 margin: const EdgeInsets.only(bottom: 30),
