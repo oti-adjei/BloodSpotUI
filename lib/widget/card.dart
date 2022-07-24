@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
+import 'package:share_plus/share_plus.dart';
 
 import 'package:url_launcher/url_launcher.dart';
 
@@ -11,6 +12,7 @@ class MyCard extends StatelessWidget {
   final day;
   final double distance;
   final String url;
+  final String urlshare;
   final String gender;
   final String mainText;
   const MyCard(
@@ -21,7 +23,8 @@ class MyCard extends StatelessWidget {
       required this.distance,
       required this.url,
       required this.gender,
-      required this.mainText})
+      required this.mainText,
+      required this.urlshare})
       : super(key: key);
 
   @override
@@ -466,16 +469,21 @@ class MyCard extends StatelessWidget {
                                   spreadRadius: 1)
                             ],
                           ),
-                          child: CircleAvatar(
-                            radius: 25,
-                            backgroundColor: Colors.white,
-                            child: Center(
-                                child: Transform(
-                              alignment: Alignment.center,
-                              transform: Matrix4.rotationY(math.pi),
-                              child: const Icon(Icons.reply_sharp,
-                                  color: Colors.grey),
-                            )),
+                          child: InkWell(
+                            onTap: () {
+                              _shareContent(urlshare);
+                            },
+                            child: CircleAvatar(
+                              radius: 25,
+                              backgroundColor: Colors.white,
+                              child: Center(
+                                  child: Transform(
+                                alignment: Alignment.center,
+                                transform: Matrix4.rotationY(math.pi),
+                                child: const Icon(Icons.reply_sharp,
+                                    color: Colors.grey),
+                              )),
+                            ),
                           ),
                         ),
                       )
@@ -489,8 +497,13 @@ class MyCard extends StatelessWidget {
   }
 }
 
+Future _shareContent(urlshare) async {
+  await Share.share("Share this text\n$urlshare",
+      subject: "Share this subject");
+}
+
 Future linkto(String url) async {
-  const url = 'https://blog.logrocket.com';
+  //const url = 'https://blog.logrocket.com';
   if (await canLaunchUrl(Uri.parse(url))) {
     await launch(url, forceWebView: true); //forceWebView is true now
   } else {

@@ -50,6 +50,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "file",
+      "rootUri": "file:///Users/george/.pub-cache/hosted/pub.dartlang.org/file-6.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter",
       "rootUri": "file:///Users/george/Tools/flutter/packages/flutter",
       "packageUri": "lib/",
@@ -122,6 +128,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "mime",
+      "rootUri": "file:///Users/george/.pub-cache/hosted/pub.dartlang.org/mime-1.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "path",
       "rootUri": "file:///Users/george/.pub-cache/hosted/pub.dartlang.org/path-1.8.1",
       "packageUri": "lib/",
@@ -148,6 +160,42 @@
     {
       "name": "plugin_platform_interface",
       "rootUri": "file:///Users/george/.pub-cache/hosted/pub.dartlang.org/plugin_platform_interface-2.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "share_plus",
+      "rootUri": "file:///Users/george/.pub-cache/hosted/pub.dartlang.org/share_plus-4.0.10",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "share_plus_linux",
+      "rootUri": "file:///Users/george/.pub-cache/hosted/pub.dartlang.org/share_plus_linux-3.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "share_plus_macos",
+      "rootUri": "file:///Users/george/.pub-cache/hosted/pub.dartlang.org/share_plus_macos-3.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "share_plus_platform_interface",
+      "rootUri": "file:///Users/george/.pub-cache/hosted/pub.dartlang.org/share_plus_platform_interface-3.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "share_plus_web",
+      "rootUri": "file:///Users/george/.pub-cache/hosted/pub.dartlang.org/share_plus_web-3.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "share_plus_windows",
+      "rootUri": "file:///Users/george/.pub-cache/hosted/pub.dartlang.org/share_plus_windows-3.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -260,7 +308,7 @@
       "languageVersion": "2.17"
     }
   ],
-  "generated": "2022-07-24T15:35:44.390043Z",
+  "generated": "2022-07-24T16:07:19.068411Z",
   "generator": "pub",
   "generatorVersion": "2.17.5"
 }
