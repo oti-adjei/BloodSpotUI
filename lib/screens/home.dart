@@ -1,6 +1,6 @@
+import 'package:blood_spot/widget/card.dart';
 import 'package:flutter/material.dart';
 import '../widget/appbar.dart';
-import '../widget/card.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -45,71 +45,67 @@ class _HomeState extends State<Home> {
                 ),
               ),
               Expanded(
-                  flex: 9,
-                  child: Container(
-                    //color: Colors.white,
-                    child: PageView(
-                      controller: PageController(
-                        viewportFraction: 0.85,
-                        initialPage: 0,
-                      ),
-                      scrollDirection: Axis.horizontal,
-                      children: const [
-                        MyCard(
-                          age: 10,
-                          name: "Jared Farad",
-                          day: "Today",
-                          distance: 11.5,
-                          url: "https:ww.google.com",
-                          gender: "Male",
-                          mainText: "Donate Blood and\nBecome a Superhero",
-                          urlshare: 'www.google.com',
-                        ),
-                        MyCard(
-                          age: 15,
-                          name: "Bill Clinton",
-                          day: "Yesterday",
-                          distance: 2,
-                          url: "https:www.facebook.com",
-                          gender: "Female",
-                          mainText: "Help a Brother\nOut Okay?",
-                          urlshare: 'www.google.com',
-                        ),
-                        MyCard(
-                          age: 10,
-                          name: "Jared Farad",
-                          day: "Today",
-                          distance: 11.5,
-                          url: "https:ww.google.com",
-                          gender: "Male",
-                          mainText: "Donate Blood and\nBecome a Superhero",
-                          urlshare: 'www.google.com',
-                        ),
-                        MyCard(
-                          age: 15,
-                          name: "Bill Clinton",
-                          day: "Yesterday",
-                          distance: 2,
-                          url: "https:www.facebook.com",
-                          gender: "Female",
-                          mainText: "Help a Brother\nOut Okay?",
-                          urlshare: 'www.facebook.com',
-                        ),
-                        MyCard(
-                          age: 10,
-                          name: "Jared Farad",
-                          day: "Today",
-                          distance: 11.5,
-                          url: "https:ww.google.com",
-                          gender: "Male",
-                          mainText: "Donate Blood and\nBecome a Superhero",
-                          urlshare: 'www.instagram.com',
-                        ),
-                      ],
-                    ),
-                  )),
-              Expanded(
-                  flex: 1,
+                  child: PageView(
+                controller: PageController(
+                  viewportFraction: 0.85,
+                  initialPage: 0,
+                ),
+                scrollDirection: Axis.horizontal,
+                children: const [
+                  MyCard(
+                    age: 10,
+                    name: "Jared Farad",
+                    day: "Today",
+                    distance: 11.5,
+                    url: "https:ww.google.com",
+                    gender: "Male",
+                    mainText: "Donate Blood and\nBecome a Superhero",
+                    urlshare: 'www.google.com',
+                  ),
+                  MyCard(
+                    age: 15,
+                    name: "Bill Clinton",
+                    day: "Yesterday",
+                    distance: 2,
+                    url: "https:www.facebook.com",
+                    gender: "Female",
+                    mainText: "Help a Brother\nOut Okay?",
+                    urlshare: 'www.google.com',
+                  ),
+                  MyCard(
+                    age: 10,
+                    name: "Jared Farad",
+                    day: "Today",
+                    distance: 11.5,
+                    url: "https:ww.google.com",
+                    gender: "Male",
+                    mainText: "Donate Blood and\nBecome a Superhero",
+                    urlshare: 'www.google.com',
+                  ),
+                  MyCard(
+                    age: 15,
+                    name: "Bill Clinton",
+                    day: "Yesterday",
+                    distance: 2,
+                    url: "https:www.facebook.com",
+                    gender: "Female",
+                    mainText: "Help a Brother\nOut Okay?",
+                    urlshare: 'www.facebook.com',
+                  ),
+                  MyCard(
+                    age: 10,
+                    name: "Jared Farad",
+                    day: "Today",
+                    distance: 11.5,
+                    url: "https:ww.google.com",
+                    gender: "Male",
+                    mainText: "Donate Blood and\nBecome a Superhero",
+                    urlshare: 'www.instagram.com',
+                  ),
+                ],
+              )),
+              SizedBox(
+                  height: 50,
                   child: Container(
                       //color: Colors.black
                       )),

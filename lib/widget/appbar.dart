@@ -17,12 +17,14 @@ class Customappbar extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Welcome",
+                const Text("Welcome",
                     style: TextStyle(fontSize: 25, color: Colors.white)),
-                Padding(padding: EdgeInsets.only(top: 5)),
+                const SizedBox(
+                  height: 5,
+                ),
                 Text(
                   "Hello $userName",
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 15,
                   ),

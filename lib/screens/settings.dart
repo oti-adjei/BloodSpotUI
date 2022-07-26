@@ -13,7 +13,7 @@ class Settings extends StatefulWidget {
 }
 
 class _SettingsState extends State<Settings> {
-  void EditDialog() {
+  void editDialog() {
     showDialog(
         context: context,
         builder: (context) {
@@ -44,10 +44,10 @@ class _SettingsState extends State<Settings> {
         //AppBAr
         appBar: AppBar(
           elevation: 0.5,
-          leading: const Icon(
-            Icons.arrow_back,
-            color: Colors.black,
-          ),
+          // leading: const Icon(
+          //   Icons.arrow_back,
+          //   color: Colors.black,
+          // ),
           actions: <Widget>[
             IconButton(
               icon: const Icon(
@@ -56,7 +56,7 @@ class _SettingsState extends State<Settings> {
               ),
               onPressed: () {
                 // Display the edit dialog
-                EditDialog();
+                editDialog();
               },
             )
           ],

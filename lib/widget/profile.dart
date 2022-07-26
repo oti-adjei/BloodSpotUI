@@ -34,51 +34,44 @@ class MyWidget extends StatelessWidget {
       children: <Widget>[
         Expanded(
           flex: 3, // 20%
-          child: Container(
-            //color: Colors.green,
-            child: Column(
-              children: [
-                Expanded(
-                  flex: 8,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      // color: Colors.white,
-                      border: Border.all(color: Colors.white, width: 2),
-                      shape: BoxShape.circle,
-                      boxShadow: const [
-                        BoxShadow(
-                            blurRadius: 5,
-                            color: Color.fromARGB(255, 205, 205, 205),
-                            spreadRadius: 4)
-                      ],
-                    ),
-                    margin: const EdgeInsets.only(top: 20),
-                    //color: Colors.indigo,
-                    child: const Center(
-                        child: SizedBox(
-                      height: 115,
-                      width: 115,
-                      child: CircleAvatar(
-                        backgroundImage: AssetImage("assets/images/1.jpg"),
-                      ),
-                    )),
+          child: Column(
+            children: [
+              Expanded(
+                flex: 8,
+                child: Container(
+                  decoration: BoxDecoration(
+                    // color: Colors.white,
+                    border: Border.all(color: Colors.white, width: 2),
+                    shape: BoxShape.circle,
+                    boxShadow: const [
+                      BoxShadow(
+                          blurRadius: 5,
+                          color: Color.fromARGB(255, 205, 205, 205),
+                          spreadRadius: 4)
+                    ],
                   ),
-                ),
-                Expanded(
-                  flex: 2,
-                  child: Container(
-                    //color: Colors.red,
-                    child: Center(
-                      child: Text(name,
-                          style: TextStyle(
-                              fontSize:
-                                  MediaQuery.of(context).size.height * 0.02,
-                              fontWeight: FontWeight.bold)),
+                  margin: const EdgeInsets.only(top: 20),
+                  //color: Colors.indigo,
+                  child: const Center(
+                      child: SizedBox(
+                    height: 115,
+                    width: 115,
+                    child: CircleAvatar(
+                      backgroundImage: AssetImage("assets/images/1.jpg"),
                     ),
-                  ),
+                  )),
                 ),
-              ],
-            ),
+              ),
+              Expanded(
+                flex: 2,
+                child: Center(
+                  child: Text(name,
+                      style: TextStyle(
+                          fontSize: MediaQuery.of(context).size.height * 0.02,
+                          fontWeight: FontWeight.bold)),
+                ),
+              ),
+            ],
           ),
         ),
         Expanded(
