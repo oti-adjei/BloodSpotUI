@@ -1,5 +1,6 @@
 // import 'package:akar_icons_flutter/akar_icons_flutter.dart';
 
+import 'package:blood_spot/screens/search.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
@@ -23,6 +24,7 @@ class _CustomBottomNavigationState extends State<CustomBottomNavigation> {
     const Home(),
     const Add(),
     const Settings(),
+    const SearchSection(),
   ];
   // current index
 
@@ -67,10 +69,10 @@ class _CustomBottomNavigationState extends State<CustomBottomNavigation> {
                   icon: LineIcons.heart,
                   text: 'Donate',
                 ),
-                // GButton(
-                //   icon: LineIcons.search,
-                //   text: 'Search',
-                // ),
+                GButton(
+                  icon: LineIcons.search,
+                  text: 'Search',
+                ),
                 GButton(
                   icon: LineIcons.user,
                   text: 'Profile',
