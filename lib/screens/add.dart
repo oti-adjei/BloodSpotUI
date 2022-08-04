@@ -12,7 +12,7 @@ class _AddState extends State<Add> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color.fromARGB(255, 220, 173, 156),
+        backgroundColor: Color.fromARGB(150, 220, 173, 156),
         body: SafeArea(
           child: Stack(
             children: [
@@ -62,10 +62,10 @@ class _AddState extends State<Add> {
                             Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
-                                color: const Color.fromARGB(255, 13, 68, 95),
+                                color: const Color.fromARGB(150, 13, 68, 95),
                               ),
                               margin: EdgeInsets.all(15),
-                              height: MediaQuery.of(context).size.height * 0.1,
+                              height: MediaQuery.of(context).size.height * 0.08,
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
